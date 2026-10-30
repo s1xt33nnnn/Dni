@@ -50,8 +50,12 @@ public class Dni {
         }
     }
 
-    public static char letterForDni( int number){
+    public static char letterForDni( int numDni){
+        return Letras[numDni % 23];
+    }
 
+    public static String NifForDni(int numDni){
+        return  numDni + "-" + letterForDni(numDni);
     }
 
     public char getLetter() {
