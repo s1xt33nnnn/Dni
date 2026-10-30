@@ -6,5 +6,7 @@ public class Main {
         Dni dni2 = new Dni(20973181, 'D');
         System.out.println(dni2.isCorrect() ? "correcto" : "incorrecto");
         Dni dni3 = new Dni("20973181X");
+        Dni dni4 = new Dni("20973181P");
+        System.out.println(dni4);
     }
 }
