@@ -57,13 +57,30 @@ public class Dni {
     public static String NifForDni(int numDni){
         return  numDni + "-" + letterForDni(numDni);
     }
+    public String toFormattedString(){
+        String strNum = "" + numDni;
+        String numFormatted = "";
+        if (numDni > 999){
+            numFormatted += "." + strNum.substring(strNum.length() - 3,  strNum.length());
+            if (numDni > 999999){
+                numFormatted = strNum.substring(0, strNum.length() - 6) + "."
+                        + strNum.substring(strNum.length() - 6, strNum.length() - 3) + numFormatted;
+            }
+        }else {
+            numFormatted = strNum;
+        }
+        numFormatted += "-" + letter;
+        return numFormatted;
+    }
 
     public char getLetter() {
         return letter;
     }
+
 
     @Override
     public String toString() {
         return numDni + "-" + letter;
     }
 }
+

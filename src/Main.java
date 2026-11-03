@@ -8,5 +8,6 @@ public class Main {
         Dni dni3 = new Dni("20973181X");
         Dni dni4 = new Dni("20973181P");
         System.out.println(dni4);
+        System.out.println(dni3.toFormattedString());
     }
 }
